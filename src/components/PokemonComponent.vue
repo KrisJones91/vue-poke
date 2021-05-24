@@ -1,13 +1,13 @@
 <template>
   <div class="pokemon-component col-3 text-center">
-    <ul class="card mt-4 justify-content-center mt-4">
+    <ul class="card main-card mt-4 justify-content-center mt-4">
       <li
-        class="card mt-1 align-items-center"
-        v-for="pokemon in state.pokemon"
-        :key="pokemon.name"
+        class="card mt-1 mr-5"
+        v-for="poke in state.pokemon"
+        :key="poke.name"
       >
-        <h6 class="m-2" @click="setActivePokemon(pokemon.url)">
-          {{ pokemon.name.slice(0,1).toUpperCase() }}{{ pokemon.name.slice(1) }}
+        <h6 class="m-2 " @click="getActivePokemon(poke.url)">
+          {{ poke.name.slice(0,1).toUpperCase() }}{{ poke.name.slice(1) }}
         </h6>
       </li>
     </ul>
@@ -37,8 +37,8 @@ export default {
     })
     return {
       state,
-      setActivePokemon(pokemon) {
-        pokemonService.getActivePokemon(pokemon)
+      getActivePokemon(poke) {
+        pokemonService.getActivePokemon(poke)
       },
       prev() {
         // pokemonService.prev()
@@ -53,6 +53,10 @@ export default {
 </script>
 
 <style scoped>
+.main-card{
+  border: 2px solid black;
+  background-color: rgba(223, 165, 5, 0.747);
+}
 h6:hover {
   cursor: pointer;
 }
