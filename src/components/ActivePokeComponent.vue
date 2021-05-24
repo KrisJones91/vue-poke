@@ -9,7 +9,7 @@
         <h4 class="text-capitalize mt-5">
           {{ state.activePokemon.name }}
         </h4>
-        <h5 class="text-capitalize mt-4">Type: {{ type() }}</h5>
+        <h5 class="text-capitalize mt-4">Type: {{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</h5>
       </div>
       <div class="col-12" v-if="state.activePokemon.sprites">
         <!-- <img :src="state.activePokemon.sprites.front_default" alt="" /> -->

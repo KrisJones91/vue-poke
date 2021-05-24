@@ -2,7 +2,7 @@
   <div class="pokemon-component col-3 text-center">
     <ul class="card main-card mt-4 justify-content-center mt-4">
       <li
-        class="card mt-1 mr-5"
+        class="card sec-card mt-1 mr-5"
         v-for="poke in state.pokemon"
         :key="poke.name"
       >
@@ -25,7 +25,7 @@
 import { computed, reactive } from 'vue'
 import { AppState } from '../AppState'
 import { pokemonService } from '../services/PokemonService'
-import { logger } from '../utils/Logger'
+// import { logger } from '../utils/Logger'
 export default {
   name: 'Pokemon',
   props: [],
@@ -42,7 +42,7 @@ export default {
       },
       prev() {
         // pokemonService.prev()
-        logger.log('This function does not work yet, sorry!')
+        pokemonService.prev()
       },
       next() {
         pokemonService.next()
@@ -57,7 +57,13 @@ export default {
   border: 2px solid black;
   background-color: rgba(223, 165, 5, 0.747);
 }
-h6:hover {
+.sec-card{
+  border: 3px outset white;
+  box-shadow: 1px 3px 5px gray;
+}
+.sec-card:hover{
+  transform: scale(.95);
   cursor: pointer;
 }
+
 </style>
