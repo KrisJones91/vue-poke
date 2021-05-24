@@ -1,22 +1,21 @@
 <template>
-  <div class="col-3 text-center">
-    <h2 class="mt-3">Pokedex</h2>
-    <ul class="mt-4">
+  <div class="pokemon-component col-3 text-center">
+    <ul class="card mt-4 justify-content-center mt-4">
       <li
-        class="text-capitalize mt-1"
+        class="card mt-1 align-items-center"
         v-for="pokemon in state.pokemon"
         :key="pokemon.name"
       >
-        <h6 @click="setActivePokemon(pokemon.url)">
-          {{ pokemon.name }}
+        <h6 class="m-2" @click="setActivePokemon(pokemon.url)">
+          {{ pokemon.name.slice(0,1).toUpperCase() }}{{ pokemon.name.slice(1) }}
         </h6>
       </li>
     </ul>
     <div class="row mt-4">
       <div class="col d-flex justify-content-center">
         <!-- NOTE figure out how to disable button when no prev or next -->
-        <button class="mr-4" @click="prev">PREV</button>
-        <button @click="next">NEXT</button>
+        <!-- <button class="mr-4" @click="prev">PREV</button>
+        <button @click="next">NEXT</button> -->
       </div>
     </div>
   </div>

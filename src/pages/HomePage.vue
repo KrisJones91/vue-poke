@@ -1,7 +1,7 @@
 <template>
   <div class="home container-fluid">
-    <div class="row">
-      <h1>Poke</h1>
+    <div class="row justify-content-center">
+      <h1>PokeDex</h1>
     </div>
     <div class="row">
       <Pokemon />
