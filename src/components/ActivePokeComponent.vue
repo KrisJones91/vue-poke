@@ -5,16 +5,16 @@
       class="row d-flex justify-content-center h-75"
       v-if="state.activePokemon.types"
     >
-      <div class="col-12 mt-5">
-        <h4 class="text-capitalize mt-5">
-          {{ state.activePokemon.name }}
-        </h4>
+      <div class="col-12">
+        <h1 class="">
+          {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
+        </h1>
         <h5 class="text-capitalize mt-4">Type: {{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</h5>
       </div>
       <div class="col-12" v-if="state.activePokemon.sprites">
         <!-- <img :src="state.activePokemon.sprites.front_default" alt="" /> -->
         <img
-          class="sprite"
+          class="sprite mt-0"
           :src="state.activePokemon.sprites.front_shiny"
           alt=""
         />

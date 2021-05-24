@@ -2,11 +2,11 @@
   <div class="pokemon-component col-3 text-center">
     <ul class="card main-card mt-4 justify-content-center mt-4">
       <li
-        class="card sec-card mt-1 mr-5"
+        class="card sec-card mt-1 mr-5 mb-2"
         v-for="poke in state.pokemon"
         :key="poke.name"
       >
-        <h6 class="m-2 " @click="getActivePokemon(poke.url)">
+        <h6 class="m-2" @click="getActivePokemon(poke.url)">
           {{ poke.name.slice(0,1).toUpperCase() }}{{ poke.name.slice(1) }}
         </h6>
       </li>
@@ -56,6 +56,7 @@ export default {
 .main-card{
   border: 2px solid black;
   background-color: rgba(223, 165, 5, 0.747);
+  box-shadow: 1px 3px 10px gainsboro;
 }
 .sec-card{
   border: 3px outset white;
