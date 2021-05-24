@@ -5,6 +5,7 @@
     </div>
     <div class="row">
       <Pokemon />
+      <ActivePoke />
     </div>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
   name: 'Home',
   setup() {
     onMounted(async() => {
-      await pokemonService.getPokemon()
+      await pokemonService.getPoke()
     })
   }
 }
