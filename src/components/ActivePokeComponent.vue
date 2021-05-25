@@ -7,14 +7,14 @@
       <div class="col-10 mt-4">
         <div class="card p-2">
           <div class="card-header">
-            <p class="mb-0 mt-2 ml-3 text-left">
+            <p class="mb-0 ml-3 text-left">
               {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
             </p>
             <p class="mt-0 mb-1"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
           </div>
           <div class="col-12 text-center card-body" v-if="state.activePokemon.sprites">
             <!-- <img :src="state.activePokemon.sprites.front_default" alt="" /> -->
-              <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default">
+            <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default">
           </div>
         </div>
       </div>
@@ -57,6 +57,6 @@ export default {
   background-color: rgb(109, 109, 199, 0.6);
 }
 .card-header{
-
+  height: 10vh;
 }
 </style>
