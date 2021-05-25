@@ -11,7 +11,7 @@
         </h1>
         <h5 class="text-capitalize mt-4">Type: {{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</h5>
       </div>
-      <div class="col-12" v-if="state.activePokemon.sprites">
+      <div class="col-3" v-if="state.activePokemon.sprites">
         <!-- <img :src="state.activePokemon.sprites.front_default" alt="" /> -->
         <img
           class="sprite mt-0"

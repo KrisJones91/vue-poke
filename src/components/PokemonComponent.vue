@@ -13,7 +13,6 @@
     </ul>
     <div class="row mt-4">
       <div class="col d-flex justify-content-center">
-        <!-- NOTE figure out how to disable button when no prev or next -->
         <!-- <button class="mr-4" @click="prev">PREV</button>
         <button @click="next">NEXT</button> -->
       </div>
