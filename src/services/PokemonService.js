@@ -25,6 +25,15 @@ class PokemonService {
       const res = await pokeApi.get(AppState.next)
       AppState.Pokemon = res.data.results
       AppState.next = res.data.next
+    } catch (error) {
+      logger.log(error)
+    }
+  }
+
+  async prev() {
+    try {
+      const res = await pokeApi.get(AppState.prev)
+      AppState.Pokemon = res.data.results
       AppState.prev = res.data.prev
     } catch (error) {
       logger.log(error)
