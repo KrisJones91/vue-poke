@@ -1,7 +1,7 @@
 <template>
-  <div class="home container-fluid">
+  <div class="home container-fluid bg-dark">
     <div class="row justify-content-center">
-      <h1>PokeDex</h1>
+      <h1 class="text-white mt-5">Pokemon</h1>
     </div>
     <div class="row">
       <Pokemon />
