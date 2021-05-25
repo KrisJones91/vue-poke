@@ -1,6 +1,7 @@
 <template>
-  <div class="pokemon-component col-3 text-center">
-    <ul class="card main-card mt-4 justify-content-center mt-4">
+  <div class="pokemon-component text-center">
+    <ul class="card main-card mt-3 justify-content-center">
+      <span class="mt-3"></span>
       <li
         class="card sec-card mt-1 mr-5 mb-2"
         v-for="poke in state.pokemon"
@@ -10,6 +11,7 @@
           {{ poke.name.slice(0,1).toUpperCase() }}{{ poke.name.slice(1) }}
         </h6>
       </li>
+      <span class="mt-3"></span>
     </ul>
     <div class="row mt-4">
       <div class="col d-flex justify-content-center">

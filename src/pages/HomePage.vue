@@ -4,7 +4,9 @@
       <h1 class="text-white mt-5">Pokemon</h1>
     </div>
     <div class="row">
+      <div class="col-4 main">
       <Pokemon />
+      </div>
       <ActivePoke />
     </div>
   </div>
@@ -31,5 +33,13 @@ export default {
     height: 200px;
     width: 200px;
   }
+}
+.main{
+    max-height: 480px;
+  overflow-y: auto;
+  border: inset white 3px;
+  background-color: rgba(230, 215, 134, 0.64);
+  border-radius: 2%;
+  margin: 2%;
 }
 </style>
