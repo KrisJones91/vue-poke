@@ -6,7 +6,7 @@
     >
     <!-- Fire -->
       <div class="col-10 mt-4">
-        <div class="card topper p-2 bg-danger" v-if="state.activePokemon.types[0].type.name === 'fire'">
+        <div class="card-top topper p-2 bg-danger" v-if="state.activePokemon.types[0].type.name === 'fire'">
           <div class="row justify-content-center">
             <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
             <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <!-- Grass -->
-        <div class="card topper p-2 bg-success" v-if="state.activePokemon.types[0].type.name === 'grass'">
+        <div class="card-top topper p-2 bg-success" v-if="state.activePokemon.types[0].type.name === 'grass'">
           <div class="row justify-content-center">
             <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
             <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <!-- Water -->
-        <div class="card topper p-2 bg-primary" v-if="state.activePokemon.types[0].type.name === 'water'">
+        <div class="card-top topper p-2 bg-primary" v-if="state.activePokemon.types[0].type.name === 'water'">
           <div class="row justify-content-center">
             <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
             <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
@@ -35,7 +35,28 @@
             <p class="col-2 text-left mb-0 p-0"><small><b>{{ state.activePokemon.stats[0].base_stat }}</b>hp</small></p>
           </div>
         </div>
-          <div class="card topper p-2 bg-success" v-if="state.activePokemon.types[0].type.name === 'bug'">
+        <!-- Bug -->
+        <div class="card-top topper p-2 bg-success" v-if="state.activePokemon.types[0].type.name === 'bug'">
+          <div class="row justify-content-center">
+            <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
+            <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
+              {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
+            </b></h5>
+            <p class="col-2 text-left mb-0 p-0"><small><b>{{ state.activePokemon.stats[0].base_stat }}</b>hp</small></p>
+          </div>
+        </div>
+        <!-- Normal -->
+        <div class="card-top topper p-2 bg-light" v-if="state.activePokemon.types[0].type.name === 'normal'">
+          <div class="row justify-content-center">
+            <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
+            <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
+              {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
+            </b></h5>
+            <p class="col-2 text-left mb-0 p-0"><small><b>{{ state.activePokemon.stats[0].base_stat }}</b>hp</small></p>
+          </div>
+        </div>
+        <!-- Psychic & Poison -->
+        <div class="card-top topper p-2 bg-purp" v-if="state.activePokemon.types[0].type.name === 'poison'">
           <div class="row justify-content-center">
             <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
             <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
@@ -88,7 +109,8 @@ export default {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .topper{
-  border: 3px solid gold;
+  border: 4px solid gold;
+
 }
 .state{
   border: 2px solid black;

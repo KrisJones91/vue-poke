@@ -6,7 +6,7 @@
         v-for="poke in state.pokemon"
         :key="poke.name"
       >
-        <h6 class="m-2" @click="getActivePokemon(poke.url)">
+        <h6 class="m-1" @click="getActivePokemon(poke.url)">
           {{ poke.name.slice(0,1).toUpperCase() }}{{ poke.name.slice(1) }}
         </h6>
       </li>
