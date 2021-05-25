@@ -15,8 +15,8 @@
     </ul>
     <div class="row mt-4">
       <div class="col d-flex justify-content-center">
-        <!-- <button class="mr-4" @click="prev">PREV</button>
-        <button @click="next">NEXT</button> -->
+        <button class="mr-4" @click="prev">PREV</button>
+        <button @click="next">NEXT</button>
       </div>
     </div>
   </div>
@@ -42,7 +42,6 @@ export default {
         pokemonService.getActivePokemon(poke)
       },
       prev() {
-        // pokemonService.prev()
         pokemonService.prev()
       },
       next() {
