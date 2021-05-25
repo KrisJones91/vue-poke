@@ -65,11 +65,21 @@
             <p class="col-2 text-left mb-0 p-0"><small><b>{{ state.activePokemon.stats[0].base_stat }}</b>hp</small></p>
           </div>
         </div>
-        <div class="col-12 text-center card-body" v-if="state.activePokemon.sprites">
+        <!-- Electric -->
+        <div class="card-top topper p-2 bg-warning" v-if="state.activePokemon.types[0].type.name === 'poison'">
+          <div class="row justify-content-center">
+            <p class="col-4 text-center mb-0 p-0"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
+            <h5 class="col-4 text-center mr-5 mb-0 p-0"><b>
+              {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
+            </b></h5>
+            <p class="col-2 text-left mb-0 p-0"><small><b>{{ state.activePokemon.stats[0].base_stat }}</b>hp</small></p>
+          </div>
+        </div>
+        <div class="col-12 text-center topper" v-if="state.activePokemon.sprites">
           <img class="poke-main " :src="state.activePokemon.sprites.front_default" alt="" />
           <!-- <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default"> -->
         </div>
-        <div class="card-footer">
+        <div class="card-body">
           <p>{{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}</p>
         </div>
       </div>
@@ -111,8 +121,12 @@ export default {
   border: 4px solid gold;
   background-color: rgba(0, 0, 0, 0.6);
 }
+.card-img-top{
+  border: 4px solid gold;
+}
 .topper{
   border: 4px solid gold;
+  padding: 0%;
 }
 .card{
   border-radius: 20%;
