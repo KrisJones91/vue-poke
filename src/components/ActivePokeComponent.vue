@@ -5,16 +5,16 @@
       v-if="state.activePokemon.types"
     >
       <div class="col-10 mt-4">
-        <div class="card">
+        <div class="card p-2">
           <div class="card-header">
-            <h1>
+            <p class="mb-0 mt-2 ml-3 text-left">
               {{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}
-            </h1>
+            </p>
+            <p class="mt-0 mb-1"><small>{{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</small></p>
           </div>
-          <h5 class="text-capitalize mt-4">Type: {{ type().slice(0,1).toUpperCase() }}{{ type().slice(1) }}</h5>
-          <div class="col-12 text-center" v-if="state.activePokemon.sprites">
+          <div class="col-12 text-center card-body" v-if="state.activePokemon.sprites">
             <!-- <img :src="state.activePokemon.sprites.front_default" alt="" /> -->
-            <img class="poke-main" :src="state.activePokemon.sprites.other.dream_world.front_default">
+              <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default">
           </div>
         </div>
       </div>
@@ -52,5 +52,11 @@ export default {
 .poke-main{
   height: 30vh;
 }
+.card-body{
+  border: 6px solid gold;
+  background-color: rgb(109, 109, 199, 0.6);
+}
+.card-header{
 
+}
 </style>
