@@ -69,6 +69,9 @@
           <img class="poke-main " :src="state.activePokemon.sprites.front_default" alt="" />
           <!-- <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default"> -->
         </div>
+        <div class="card-footer">
+          <p>{{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}</p>
+        </div>
       </div>
       <!-- <div class="col-12 d-flex justify-content-center">
         <h5 class="align-self-end mr-2">Catch It!</h5>
@@ -110,7 +113,9 @@ export default {
 }
 .topper{
   border: 4px solid gold;
-
+}
+.card{
+  border-radius: 20%;
 }
 .state{
   border: 2px solid black;
