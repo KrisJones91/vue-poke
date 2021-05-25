@@ -38,7 +38,7 @@ export default {
     max-height: 480px;
   overflow-y: auto;
   border: outset white 3px;
-  background-color: rgba(223, 18, 18, 0.64);
+  background-color: rgba(0, 0, 0, 0.64);
   border-radius: 2%;
   margin: 2%;
 }

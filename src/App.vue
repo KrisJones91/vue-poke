@@ -5,11 +5,6 @@
   <main>
     <router-view />
   </main>
-  <footer>
-    <div class="bg-light text-light text-center p-4">
-      Made for PokeFans
-    </div>
-  </footer>
 </template>
 
 <script>

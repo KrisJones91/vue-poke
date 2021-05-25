@@ -55,7 +55,7 @@ export default {
 <style scoped>
 .main-card{
   border: 2px solid black;
-  background-color: rgba(223, 165, 5, 0.747);
+  background-color: rgba(154, 5, 223, 0.747);
   box-shadow: 1px 3px 10px gainsboro;
 }
 .sec-card{
