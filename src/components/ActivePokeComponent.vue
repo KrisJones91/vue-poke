@@ -79,8 +79,15 @@
           <img class="poke-main " :src="state.activePokemon.sprites.front_default" alt="" />
           <!-- <img class="poke-main m-4" :src="state.activePokemon.sprites.other.dream_world.front_default"> -->
         </div>
-        <div class="card-body">
-          <p>{{ state.activePokemon.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.name.slice(1) }}</p>
+        <div class="card-body text-left" v-if="state.activePokemon.abilities">
+          <div class="row">
+            <div class="col text-center text-white">
+              <h4>{{ state.activePokemon.abilities[0].ability.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.abilities[0].ability.name.slice(1) }}</h4>
+            </div>
+            <div class="col text-center text-white">
+              <h4>{{ state.activePokemon.abilities[1].ability.name.slice(0,1).toUpperCase() }}{{ state.activePokemon.abilities[1].ability.name.slice(1) }}</h4>
+            </div>
+          </div>
         </div>
       </div>
       <!-- <div class="col-12 d-flex justify-content-center">
@@ -93,6 +100,7 @@
 <script>
 import { computed, reactive } from 'vue'
 import { AppState } from '../AppState'
+
 export default {
   name: 'ActivePoke',
   setup() {
