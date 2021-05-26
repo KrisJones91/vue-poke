@@ -115,6 +115,17 @@ export default {
         }
         return state.activePokemon.types[0].type.name
       }
+      // moves() {
+      //   let name = ''
+      //   let stat = 0
+      //   for (let i = 0; i < state.activePokemon.stats.length; i++) {
+      //     name += state.activePokemon.stats[i].stat.name
+      //     stat += state.activePokemon.stats[i].base_stat
+      //     console.log(name, stat)
+      //   }
+      //   return stat + name
+      // }
+
     }
   }
 }
