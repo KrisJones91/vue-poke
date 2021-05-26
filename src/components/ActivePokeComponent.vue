@@ -136,9 +136,6 @@ export default {
   border: 4px solid gold;
   padding: 0%;
 }
-.card{
-  border-radius: 20%;
-}
 .state{
   border: 2px solid black;
 }

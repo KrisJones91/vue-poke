@@ -1,9 +1,6 @@
 <template>
   <div class="home container-fluid bg-dark">
     <div class="row justify-content-center">
-      <h1 class="text-white mt-5">Pokemon</h1>
-    </div>
-    <div class="row">
       <div class="col-4 main">
       <Pokemon />
       </div>
